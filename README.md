@@ -6,10 +6,11 @@ First, clone the repo and do a bundle install. Rales Engine uses ruby version 2.
 
     $ git clone git@github.com:liambarstad/rales-engine.git
     $ bundle install
-    
+
 Next, initialize the database, run the migrations, and seed the database.
 
-    $ rake db:{create,migrate}
+    $ rake db:create
+    $ rake db:migrate
     $ rake import_csv:all
 
 If postgres is non-responsive on your machine, try opening a separate terminal and starting it manually by:
@@ -150,7 +151,11 @@ The endpoints are listed here:
 
 ##Testing
 
-Rales Engine is fully tested in RSpec, the contents of which can be found in the /spec directory folder. It is also tested using an external testing suite written in unittest which can be found [here]("https://github.com/turingschool/rales_engine_spec_harness")
+Rales Engine is fully tested in RSpec, the contents of which can be found in the /spec directory folder. It is also tested using an external testing suite written in Minitest, which can be found [here]("https://github.com/turingschool/rales_engine_spec_harness")
+
+To prepare the database for testing, run
+
+    $ rake db:test:prepare
 
 In order to run the external test suite, clone the repo listed above and open it in a separate terminal tab. Then run Rails Engine using *$ rails s* and navigate back to the tab where the spec harness is open and run:
 
