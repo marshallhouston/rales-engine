@@ -1,6 +1,6 @@
 # Rails Engine
 
-###Setup
+### Setup
 
 First, clone the repo and do a bundle install. Rales Engine uses ruby version 2.4.1, so make sure you have 2.4.1 installed.
 
@@ -23,7 +23,7 @@ To run the app on a local server,
 
 This will run the app on port 3000 to the url 'http://localhost:3000'
 
-##Features
+## Features
 
 Rales Engine is a fully accessible API that outputs data, relationships, and business intelligence pertaining to:
 
@@ -72,7 +72,7 @@ Rales Engine is a fully accessible API that outputs data, relationships, and bus
 All endpoints should be preceeded with either 'http://localhost:3000', or the url or port the app is running on. When finding a record by parameters, use the attribute names listed above separated by an underscore.
 The endpoints are listed here:
 
-###Invoices
+## Invoices
 
 * All invoices: *GET '/api/v1/invoices*
 * Find specific invoice: *GET '/api/v1/invoices/:id*
@@ -85,7 +85,7 @@ The endpoints are listed here:
 * Find the customer for a specific invoice: *GET /api/v1/invoices/:id/customer*
 * Find the merchant for a specific invoice: *GET /api/v1/invoices/:id/merchant*
 
-###Items
+## Items
 
 * All items: *GET '/api/v1/items*
 * Find specific item: *GET '/api/v1/items/:id'*
@@ -95,7 +95,7 @@ The endpoints are listed here:
 * Find all invoice items for a specific item: *GET /api/v1/items/:id/invoice_items*
 * Find the merchant for a specific item: *GET /api/v1/items/:id/merchant*
 
-###Invoice Items
+## Invoice Items
 
 * All invoice items: *GET '/api/v1/invoice_items*
 * Find specific invoice item: *GET '/api/v1/invoice_items/:id*
@@ -105,7 +105,7 @@ The endpoints are listed here:
 * Find the invoice for a specific invoice item: *GET /api/v1/invoice_items/:id/invoice*
 * Find the item for a specific invoice item: *GET /api/v1/invoice_items/:id/item*
 
-###Merchants
+## Merchants
 
 * All merchants: *GET '/api/v1/merchants*
 * Find specific merchant: *GET '/api/v1/merchants/:id*
@@ -115,7 +115,7 @@ The endpoints are listed here:
 * Find the items for a specific merchant: *GET /api/v1/merchants/:id/items*
 * Find the invoices for a specific merchant: *GET /api/v1/merchants/:id/invoices*
 
-###Customers
+## Customers
 
 * All customers: *GET '/api/v1/customers*
 * Find specific customers: *GET '/api/v1/customers/:id*
@@ -126,7 +126,7 @@ The endpoints are listed here:
 * Find the invoices for a specific customer: *GET /api/v1/customers/:id/invoices*
 * Find the transactions for a specific customer: *GET /api/v1/customers/:id/transactions*
 
-###Transactions
+## Transactions
 
 * All transactions: *GET '/api/v1/transactions*
 * Find specific transaction: *GET '/api/v1/transactions/:id*
@@ -135,7 +135,7 @@ The endpoints are listed here:
 * Find a random transaction: *GET '/api/v1/transactions/find_all?parameters*
 * Find the invoice for a specific transactions: *GET /api/v1/transaction/:id/invoice*
 
-##Business Intelligence
+## Business Intelligence
 
 * *GET /api/v1/merchants/most_revenue?quantity=x* returns the top x merchants ranked by total revenue.
 * *GET /api/v1/merchants/most_items?quantity=x* returns the top x merchants ranked by total number of items sold.
@@ -149,7 +149,7 @@ The endpoints are listed here:
 * *GET /api/v1/items/:id/best_day* returns the date with the most sales for the given item using the invoice date.
 * *GET /api/v1/customers/:id/favorite_merchant* returns a merchant where the customer has conducted the most successful transactions.
 
-##Testing
+## Testing
 
 Rales Engine is fully tested in RSpec, the contents of which can be found in the /spec directory folder. It is also tested using an external testing suite written in Minitest, which can be found [here]("https://github.com/turingschool/rales_engine_spec_harness")
 
@@ -162,4 +162,6 @@ In order to run the external test suite, clone the repo listed above and open it
     rake                          #runs all tests
     ruby test/<< directory name   #runs a specific test file
 
-####credits: Marshall Houston and Liam Barstad
+##### Project Specifications: http://backend.turing.io/module3/projects/rails_engine
+
+#### Credits: Liam Barstad & Marshall Houston
