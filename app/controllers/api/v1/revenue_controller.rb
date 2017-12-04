@@ -1,7 +1,7 @@
 class Api::V1::RevenueController < ApplicationController
 
   def show
-    render json: { revenue: "#{merchant.revenue(params['date'])}" }
+    render json: merchant.revenue(params['date']), serializer: MerchantRevenueSerializer
   end
 
   private
