@@ -1,4 +1,4 @@
-class Api::V1::RevenueController < ApplicationController
+class Api::V1::MerchantRevenueController < ApplicationController
 
   def show
     render json: merchant.revenue(params['date']), serializer: MerchantRevenueSerializer
